@@ -9,11 +9,16 @@ import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { getParsedNftAccountsByOwner } from "@nfteyez/sol-rayz";
 import { CREATOR_ADDRESS } from "../config";
 
-import Button from "../components/Button";
-import NFTCard from "../components/NFTCard";
-import { web3 } from '@project-serum/anchor';
-
-
+import { web3 } from "@project-serum/anchor";
+import InfiniteSlider from "../components/InfiniteSlider";
+import About from "../components/About";
+import Collection from "../components/Collection";
+import Roadmap from "../components/Roadmap";
+import Team from "../components/Team";
+import Faq from "../components/Faq";
+import Collapse from "../components/Collapse";
+import Follow from "../components/Follow";
+import Home from "../components/Home";
 
 export interface NFTType {
   imgUrl: string;
@@ -21,7 +26,7 @@ export interface NFTType {
   description: string;
 }
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   const wallet = useWallet();
   const [nftList, setNftList] = useState<NFTType[]>([]);
   const [myBalance, setMyBalance] = useState<Number>(0);
@@ -32,16 +37,13 @@ const Home: NextPage = () => {
     // eslint-disable-next-line
   }, [wallet.publicKey, wallet.connected]);
 
-  const selectAll = () => {
-
-  }
-
+  const selectAll = () => {};
 
   const getAllNfts = async () => {
     const solConnection = new web3.Connection(web3.clusterApiUrl("devnet"));
     if (wallet?.publicKey) {
-      let balance = await solConnection.getBalance(wallet.publicKey)
-      setMyBalance(balance)
+      let balance = await solConnection.getBalance(wallet.publicKey);
+      setMyBalance(balance);
     }
 
     if (wallet.publicKey === null) return;
@@ -56,20 +58,17 @@ const Home: NextPage = () => {
         for (let item of nftList) {
           if (item.data?.creators)
             if (item.data?.creators[0].address === CREATOR_ADDRESS) {
-
               try {
                 const response = await fetch(item?.data.uri, {
                   method: "GET",
                 });
                 const responsedata = await response.json();
-                console.log(responsedata)
+                console.log(responsedata);
                 list.push({
                   imgUrl: responsedata.image,
                   tokenId: item?.data.name,
-                  description: responsedata.description
-
+                  description: responsedata.description,
                 });
-
               } catch (error) {
                 console.error("Unable to fetch data:", error);
               }
@@ -77,7 +76,7 @@ const Home: NextPage = () => {
         }
       }
 
-      console.log("nftList =>", list)
+      console.log("nftList =>", list);
       setNftList(list);
     } catch (error) {
       console.log(error);
@@ -85,35 +84,28 @@ const Home: NextPage = () => {
   };
 
   const selectAllNFT = () => {
-    setSlectState(true)
-  }
+    setSlectState(true);
+  };
   const clearSelectNFT = () => {
-    setSlectState(false)
-  }
+    setSlectState(false);
+  };
   const sendNFT = () => {
-    setSlectState(false)
-  }
+    setSlectState(false);
+  };
 
   return (
-    <main className="w-full">
-      <div className="lg:container mx-auto">
-        <div className="w-full justify-start flex gap-[20px] mt-[17px]">
-          <h1 className="font-bold text-lg text-white">Total NFT : {nftList.length}</h1>
-          <h1 className="font-bold text-lg text-white">Balance: {myBalance}</h1>
-
-          <Button bgColor="0797FF" btnText="select all" onclickfunction={selectAllNFT} />
-          <Button bgColor="0797FF" btnText="clear" onclickfunction={clearSelectNFT} />
-          <Button bgColor="92FF07" btnText="send" onclickfunction={sendNFT} />
-
-        </div>
-        <div className="w-full grid grid-cols-4 mt-[27px] gap-[25px]">
-          {nftList.length > 0 && nftList.map((data, key) => (
-            < NFTCard imgUrl={data.imgUrl} tokenId={data.tokenId} description={data.description} key={key} checkAll={selectState} />
-          ))}
-        </div>
-      </div>
+    <main className="flex flex-col items-center justify-center w-full">
+      <Home />
+      <InfiniteSlider />
+      <About />
+      <Collection />
+      <Roadmap />
+      <Team />
+      <InfiniteSlider />
+      <Faq />
+      <Follow />
     </main>
   );
 };
 
-export default Home;
+export default HomePage;

@@ -5,9 +5,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -41,6 +41,7 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -70,27 +71,189 @@
     --card-border-rgb: 200, 200, 200;
   }
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 html,
 body {
-  max-width: 100vw;
   overflow-x: hidden;
-}
-body {
-  color: rgb(var(--foreground-rgb));
-  background: #170047;
+  background-color: #fffdf1 !important;
 }
 
-a {
-    color: inherit;
-  text-decoration: none;
+main {
+  transition: all ease-in-out;
+  animation-duration: 1000ms;
 }
-    @media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-    }
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Gulfs Display";
+  src: local("Gulfs Display Expanded"), local("Gulfs-Display-Expanded"),
+    url("../../public/fonts/GulfsDisplay-Expanded.woff") format("woff2"),
+    url("../../public/fonts/GulfsDisplay-Expanded.woff2") format("woff"),
+    url("../../public/fonts/GulfsDisplay-Expanded.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-Gulfs {
+  font-family: "Gulfs Display" !important;
+}
+
+.text-shadow1 {
+  text-shadow: 3px 5px 0 #000;
+}
+
+.text-shadow2 {
+  text-shadow: 3px 5px 10px #000;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 1.5rem;
+  width: 100%;
+  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.card:nth-child(1) {
+  top: 1rem;
+}
+
+.card:nth-child(2) {
+  top: 2rem;
+}
+
+.card:nth-child(3) {
+  top: 3rem;
+}
+
+.card:nth-child(4) {
+  top: 4rem;
+}
+
+.card:nth-child(5) {
+  top: 5rem;
+}
+
+.card:nth-child(6) {
+  top: 6rem;
+}
+
+.slider {
+  background: #fffdf1;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(550px * 15);
+}
+
+.slider .slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slider .slide {
+  height: 50px;
+  width: 550px;
+}
+
+.slide:nth-child(1),
+.slide:nth-child(10) {
+  background-color: transparent;
+}
+
+.slide:nth-child(2),
+.slide:nth-child(11) {
+  background-color: transparent;
+}
+
+.slide:nth-child(3),
+.slide:nth-child(12) {
+  background-color: transparent;
+}
+
+.slide:nth-child(4),
+.slide:nth-child(13) {
+  background-color: transparent;
+}
+
+.slide:nth-child(5),
+.slide:nth-child(14) {
+  background-color: transparent;
+}
+
+.slide:nth-child(6),
+.slide:nth-child(15) {
+  background-color: transparent;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 6));
+  }
+}
+
+.mobile-nav {
+  position: absolute;
+  background-color: #fbbf2d;
+  color: black;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0px 30px 90px rgba(62, 65, 88, 0.4);
+  transition: all 0.3s;
+  display: block;
+}
+
+.mobile-nav.opened {
+  height: auto;
+  transition: all 0.3s;
+  padding: 24px 24px;
+}
