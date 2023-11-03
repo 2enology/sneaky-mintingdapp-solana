@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from "react";
 import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { Bounce } from "react-awesome-reveal";
@@ -45,10 +46,10 @@ export default function Home() {
             Discord
           </a>
           <div className="absolute z-10 items-center justify-center hidden lg:flex right-10">
-            <img src="img/rabbit.svg" />
+            <img src="img/rabbit.svg" alt="" />
           </div>
           <div className="absolute z-20 items-center justify-center hidden lg:flex right-12">
-            <img src="img/circle.svg" />
+            <img src="img/circle.svg" alt="" />
           </div>
         </div>
         <img
