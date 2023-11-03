@@ -1,5 +1,5 @@
-# Sneaking Kitten Nft Minting Dapp on SOLANA 
 
+# Sneaky Kittens Nft Minting Dapp on Solana
 ## Requirements
 
 ## Development
