@@ -1,4 +1,4 @@
-# InkWork SOLANA NFT STAKING
+# Sneaky Kittens Nft Minting Dapp on Solana
 
 ## Requirements
 
