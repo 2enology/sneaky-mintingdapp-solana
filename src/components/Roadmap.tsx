@@ -74,7 +74,7 @@ const Roadmap = () => {
         <div className="flex justify-center w-1/2 lg:border-r-2">
           <img
             src={cardInfo[i].image}
-            className="sm:w-[250px] sm:h-[250px] w-[100px] h-[100px] rounded-full"
+            className="w-full h-full rounded-full"
             alt=""
           />
         </div>

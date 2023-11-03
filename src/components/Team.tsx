@@ -17,7 +17,7 @@ const Team = () => {
             </p>
           </div>
         </div>
-        <div className="grid w-full gap-10 p-5 lg:grid-cols-3 grid-col-1 md:grid-cols-2">
+        <div className="grid w-full gap-10 p-10 lg:grid-cols-3 grid-col-1 md:grid-cols-2">
           <TeamCard
             name={"Arjun"}
             imgUrl={"img/nft2.png"}
