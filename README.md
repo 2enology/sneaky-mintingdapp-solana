@@ -1,4 +1,4 @@
-# InkWork SOLANA NFT STAKING
+# Sneaking Kitten Nft Minting Dapp on SOLANA 
 
 ## Requirements
 
@@ -11,3 +11,4 @@ yarn dev
 ```
 
 ### Install
+yarn install

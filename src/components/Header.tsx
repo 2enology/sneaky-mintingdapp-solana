@@ -16,8 +16,6 @@ export default function Header() {
     []
   );
 
-  console.log("isActive", isActive);
-
   return (
     <div className="relative">
       <div className="fixed z-50 flex items-center justify-center w-full bg-transparent bg-opacity-30 backdrop-blur-md">
