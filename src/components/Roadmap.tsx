@@ -111,7 +111,7 @@ const Roadmap = () => {
   }
   return (
     <div
-      className="w-full flex justify-center p-[5px] max-w-[1340px] flex-col"
+      className="w-full flex justify-center p-[5px] max-w-[1340px] flex-col mt-10"
       id="roadmap"
     >
       <div className="flex flex-col">
@@ -133,7 +133,7 @@ const Roadmap = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-3 mx-10">
-          <Fade>{cards}</Fade>
+          {cards}
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 const InfiniteSlider = () => {
   return (
     <div className="py-4 border-2 border-gray-200 slider">

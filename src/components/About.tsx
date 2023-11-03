@@ -67,6 +67,42 @@ export default function About() {
               fantastic passive income.`}
               </span>
             </span>
+            <span className="text-[20px] md:text-[25px] lg:text-[30px] xl:text-[40px] font-Gulfs text-red-500">
+              Benefits of NFTs:
+            </span>
+            <span className="flex flex-col items-start justify-start gap-3 ">
+              <span className="text-lg font-semibold text-gray-700 text-start">
+                <span className="text-lg font-bold text-red-500 text-start">
+                  {" "}
+                  {`Community Rewards:`}{" "}
+                </span>
+                <span className="text-lg font-semibold text-gray-700 text-start">
+                  {" "}
+                  {` 15% of the mint cost is shared with NFT holders. Mint early to claim a larger share of every new mint!`}{" "}
+                </span>
+              </span>
+              <span className="text-lg font-semibold text-gray-700 text-start">
+                <span className="text-lg font-bold text-red-500 text-start">
+                  {" "}
+                  {`Flare Delegation Pool:`}{" "}
+                </span>
+                <span className="text-lg font-semibold text-gray-700 text-start">
+                  {" "}
+                  {`25% of the mint cost supports the Flare delegation pool, earning FLR weekly and Flaredrops monthly, which are converted to SOL for distribution to NFT holders.`}{" "}
+                  {`And yes, 28 months of Flaredrops are still coming!`}
+                </span>
+              </span>
+              <span className="text-lg font-semibold text-gray-700 text-start">
+                <span className="text-lg font-bold text-red-500 text-start">
+                  {" "}
+                  {`Secondary Sales:`}{" "}
+                </span>
+                <span className="text-lg font-semibold text-gray-700 text-start">
+                  {" "}
+                  {`Enjoy a 5% return from secondary sales directly to NFT holders.`}{" "}
+                </span>
+              </span>
+            </span>
           </Slide>
         </div>
       </div>

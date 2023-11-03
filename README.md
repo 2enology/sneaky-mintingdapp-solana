@@ -1,5 +1,5 @@
-# Sneaky Kittens Nft Minting Dapp on Solana
 
+# Sneaky Kittens Nft Minting Dapp on Solana
 ## Requirements
 
 ## Development
@@ -11,3 +11,4 @@ yarn dev
 ```
 
 ### Install
+yarn install
