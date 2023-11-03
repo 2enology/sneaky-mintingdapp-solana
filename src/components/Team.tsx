@@ -23,14 +23,14 @@ const Team = () => {
             imgUrl={"img/nft2.png"}
             role={"designer & co-founder"}
             twitterUrl={"https://twitter.com/Sneaky_labs"}
-            linkedinUrl={"https://twitter.com/Sneaky_labs"}
+            linkedinUrl={""}
           />
           <TeamCard
             name={"Sam"}
             imgUrl={"img/nft5.png"}
             role={"Developer & co-founder"}
-            twitterUrl={"https://twitter.com/Sneaky_labs"}
-            linkedinUrl={"https://twitter.com/Sneaky_labs"}
+            twitterUrl={"https://twitter.com/saadakb27044496"}
+            linkedinUrl={""}
           />
           <TeamCard
             name={"Lukas"}

@@ -58,18 +58,22 @@ export default function Follow() {
           </span>
         </div>
         <div className="flex items-center justify-center gap-3">
-          <div className="p-3 border-2 border-gray-800 rounded-full shadow-xl cursor-pointer shadow-gray-700">
+          <a
+            href="https://twitter.com/Sneaky_labs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 border-2 border-gray-800 rounded-full shadow-xl cursor-pointer shadow-gray-700"
+          >
             <FaTwitter size={30} />
-          </div>
-          <div className="p-3 border-2 border-gray-800 rounded-full shadow-xl cursor-pointer shadow-gray-700">
+          </a>
+          <a
+            href="https://discord.gg/55PAppga"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 border-2 border-gray-800 rounded-full shadow-xl cursor-pointer shadow-gray-700"
+          >
             <FaDiscord size={30} />
-          </div>
-          <div className="p-3 border-2 border-gray-800 rounded-full shadow-xl cursor-pointer shadow-gray-700">
-            <FaLinkedin size={30} />
-          </div>
-          <div className="p-3 border-2 border-gray-800 rounded-full shadow-xl cursor-pointer shadow-gray-700">
-            <FaInstagram size={30} />
-          </div>
+          </a>
         </div>
       </div>
 
