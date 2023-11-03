@@ -76,7 +76,7 @@ export default function About() {
                   {" "}
                   {`Community Rewards:`}{" "}
                 </span>
-                <span className="text-lg font-semibold text-gray-700 text-start">
+                <span className="text-lg font-semibold text-gray-700 bg-green-400 text-start">
                   {" "}
                   {` 15% of the mint cost is shared with NFT holders. Mint early to claim a larger share of every new mint!`}{" "}
                 </span>
@@ -86,7 +86,7 @@ export default function About() {
                   {" "}
                   {`Flare Delegation Pool:`}{" "}
                 </span>
-                <span className="text-lg font-semibold text-gray-700 text-start">
+                <span className="text-lg font-semibold text-gray-700 bg-green-400 text-start">
                   {" "}
                   {`25% of the mint cost supports the Flare delegation pool, earning FLR weekly and Flaredrops monthly, which are converted to SOL for distribution to NFT holders.`}{" "}
                   {`And yes, 28 months of Flaredrops are still coming!`}
@@ -97,7 +97,7 @@ export default function About() {
                   {" "}
                   {`Secondary Sales:`}{" "}
                 </span>
-                <span className="text-lg font-semibold text-gray-700 text-start">
+                <span className="text-lg font-semibold text-gray-700 bg-green-400 text-start">
                   {" "}
                   {`Enjoy a 5% return from secondary sales directly to NFT holders.`}{" "}
                 </span>

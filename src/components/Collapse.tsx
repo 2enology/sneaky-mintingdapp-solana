@@ -22,10 +22,11 @@ const Collapse = () => {
             onClick={() => toggleCollapse(index)}
           >
             <div className="flex items-center justify-between w-full">
-              <h1 className="font-bold font-Gulfs text-[20px] md:text-[40px]">
+              <h1 className="font-bold font-Gulfs text-[20px] md:text-[30px]">
                 {index === 0 && "WHAT IS SNEAKY KITTENS NFTS?"}
                 {index === 1 && "WHAT ARE THE BENEFITS OF MINTING?"}
-                {index === 2 && "HOW TO CLAIM 15% MINT BACK & SOL FROM FLAREDROP?"}
+                {index === 2 &&
+                  "HOW TO CLAIM 15% MINT BACK & SOL FROM FLAREDROP?"}
                 {index === 3 && "WHY WE PICKED SOLANA BLOCKCHAIN?"}
               </h1>
               <div
