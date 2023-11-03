@@ -17,9 +17,7 @@ const Faq = () => {
             </p>
           </div>
         </div>
-        <div>
-          <Collapse />
-        </div>
+        <Collapse />
       </div>
     </div>
   );

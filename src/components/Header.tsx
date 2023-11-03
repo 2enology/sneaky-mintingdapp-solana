@@ -3,7 +3,6 @@ import {
   WalletModalProvider,
   WalletMultiButton,
 } from "@solana/wallet-adapter-react-ui";
-// import LogoImg from "/favicon.png";
 
 import React, { useState, useCallback } from "react";
 

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { FaLinkedin, FaTwitter } from "react-icons/fa"; // For LinkedIn icon
-import Image from "next/image";
 
 const TeamCard = (props: {
   name: string;
@@ -10,8 +9,8 @@ const TeamCard = (props: {
   linkedinUrl: string;
 }) => {
   return (
-    <div className="rounded-2xl border-black border-[1px] flex flex-col items-center md:p-[80px] p-[30px] gap-5">
-      <Image
+    <div className="rounded-2xl border-black border-[2px] border-b-[8px] flex flex-col items-center md:p-[80px] p-[30px] gap-5">
+      <img
         src={props.imgUrl}
         className="rounded-full w-full h-full object-cover max-h-[250px]"
         alt=""

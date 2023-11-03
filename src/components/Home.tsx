@@ -11,14 +11,24 @@ export default function Home() {
           </h1>
         </Bounce>
         <div className="flex items-center justify-center w-full gap-2 mb-3">
-          <button className="flex items-center justify-center gap-2 px-6 py-2 font-extrabold text-black duration-300 bg-white border-b-2 border-black rounded-lg hover:bg-gray-200">
+          <a
+            href="https://twitter.com/Sneaky_labs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-6 py-2 font-extrabold text-black duration-300 bg-white border-b-2 border-black rounded-lg hover:bg-gray-200"
+          >
             <FaTwitter />
             Twitter
-          </button>{" "}
-          <button className="flex items-center justify-center gap-2 px-6 py-2 font-extrabold text-black duration-300 bg-white border-b-2 border-black rounded-lg hover:bg-gray-200">
+          </a>{" "}
+          <a
+            href="https://twitter.com/Sneaky_labs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-6 py-2 font-extrabold text-black duration-300 bg-white border-b-2 border-black rounded-lg hover:bg-gray-200"
+          >
             <FaDiscord />
             Discord
-          </button>
+          </a>
         </div>
       </div>
     </div>
